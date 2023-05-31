@@ -94,6 +94,7 @@ Array.from(document.querySelectorAll('.addToCart')).map((x)=>{
         closeModal();
         document.body.insertAdjacentHTML('afterbegin',registerLoginPage);
         addFunctionToLoginAndRegister();
+        closeListner();
     })});
     
 Array.from(document.querySelectorAll('.addToWishlist')).map((x)=>{
@@ -101,6 +102,7 @@ Array.from(document.querySelectorAll('.addToWishlist')).map((x)=>{
         closeModal();
         document.body.insertAdjacentHTML('afterbegin',registerLoginPage);
         addFunctionToLoginAndRegister();
+        closeListner();
     })})
 
 
@@ -110,13 +112,7 @@ const openRegister = ()=>{
     const modalOverlay = document.querySelector('.modalOverlay');
     closeModal();
     document.body.insertAdjacentHTML('afterbegin',registerPage);
-    modalOverlay = document.querySelector('.modalOverlay');
-    modalOverlay.addEventListener('click',()=>{
-        if (modalOverlay && document.body.contains(modalOverlay)) {
-            document.body.removeChild(modalOverlay);
-        }
-        console.log("done");
-    })  
+    closeListner();
 }
 
 
@@ -125,13 +121,7 @@ const openLogin = ()=>{
     const modalOverlay = document.querySelector('.modalOverlay');
     closeModal();
     document.body.insertAdjacentHTML('afterbegin',loginPage);
-    modalOverlay = document.querySelector('.modalOverlay');
-    modalOverlay.addEventListener('click',()=>{
-        if (modalOverlay && document.body.contains(modalOverlay)) {
-            document.body.removeChild(modalOverlay);
-        }
-        console.log("done");
-    })
+    closeListner();
 }
 
 
@@ -145,7 +135,9 @@ const closeModal = ()=>{
 //closeListner
 const closeListner = ()=>{
     const modalOverlay = document.querySelector('.modalOverlay')
-    modalOverlay.addEventListener('click',()=>{document.body.removeChild(modalOverlay)});
+    if (modalOverlay && document.body.contains(modalOverlay)){
+        modalOverlay.addEventListener('click',()=>{document.body.removeChild(modalOverlay)});
+    }
 }
 
 

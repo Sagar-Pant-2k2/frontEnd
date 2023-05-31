@@ -15,7 +15,8 @@
     color: rgb(255, 255, 255);
     height: 40px;
     overflow: hidden;
-
+  /* position: fixed;
+  top: 0px; */
   }
 .navItem {
     display: flex;
@@ -181,18 +182,18 @@ input {
   border-radius: 5px;
 }
 .modalOverlay {
-  /* margin: 10px; */
+  /* align-self: auto; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #06060688;
+  background-color: #060606dd;
   height: 100vh;
   width: 100vw;
-  z-index: 2;
-  /* position: fixed;  */
+  z-index: 5; /* Adjust the z-index value to make it appear above other elements */
+  position: fixed;
+  top: 0px; 
 }
-
 
 .modal {
   width: 350px;
@@ -202,9 +203,11 @@ input {
   align-items: center;
   justify-content: space-around;
   background-color: rgb(8, 7, 7);
-  z-index: 3;
+  z-index: 10; /* Adjust the z-index value to make it appear above other elements */
   border-radius: 5px;
+  position: relative;
 }
+
 .upperModal{
   display: flex; flex-direction: column; justify-content: center;
   height: 50%; width: 100%; align-items: center;
