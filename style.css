@@ -90,18 +90,20 @@ button{
 .productCard {
     margin: 10px;
     border: 1px solid #ccc;
-    padding: 10px;
+    /* padding: 10px; */
+    padding-top: 0px;
     width: 300px;
     overflow: hidden;
   }
   
   .productName {
+    margin-left: 10px;
     font-size: 18px;
     margin-bottom: 10px;
   }
   
   .productImage {
-    width: 350px;
+    width: 100%;
     height: 400px;
     margin-bottom: 10px;
     overflow: hidden;
@@ -114,7 +116,7 @@ button{
   }
   
   .productDescription p {
-    margin-bottom: 10px;
+    margin:10px;
   }
   
   .productFeatures {
@@ -126,6 +128,7 @@ button{
   .productDetails {
     display: flex;
     align-items: center;
+    padding: 10px;
   }
   
   .productPrice {
@@ -183,7 +186,7 @@ input {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #060606c0;
+  background-color: #06060688;
   height: 100vh;
   width: 100vw;
   z-index: 2;
@@ -198,8 +201,9 @@ input {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: black;
+  background-color: rgb(8, 7, 7);
   z-index: 3;
+  border-radius: 5px;
 }
 .upperModal{
   display: flex; flex-direction: column; justify-content: center;
