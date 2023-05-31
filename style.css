@@ -37,6 +37,14 @@
     height: 100%;
     width: 100px;
 }
+@media (max-width : 500px) {
+  .register{
+    display: none;
+  }
+  .login{
+    display: none;
+  }
+}
 
   
 button{
