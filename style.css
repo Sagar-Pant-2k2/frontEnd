@@ -232,3 +232,58 @@ input {
 .registrationForm  {
   height: 425px;
 }
+
+
+
+
+
+/* gargi's footer */
+.Main_footer{
+  width: 100%;
+  background-color: #040e0b;
+  color: #f1ececec;
+  height: 30%;
+}
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  margin: auto;
+}
+.footer_box h2{
+  font-size: 17px;
+  margin: 10px 0 15px 0;
+  cursor: pointer;
+}
+/* .footer_box p{
+  margin: 8px 0 8px 0;
+  cursor: pointer;
+}
+.Main_footer .imges{
+  width: 400px;
+}
+.Main_footer .text{
+  border-right: 2px solid #1a1b1c;
+}
+.text h1{
+  padding: 20px 20px 10px 20px ;
+  font-size: 35px;
+} */
+/* .Main_footer .text p{
+  padding: 10px 20px 20px 20px;
+  font-size: 20px;
+} */
+/* .Main_footer .downlode_store p{
+  padding: 20px 20px 20px 0;
+  font-weight: bold;
+  font-size: 17px;
+} */
+/* .Main_footer .downlode_store{
+  padding-left: 30px;
+} */
+/* .Main_footer .downlode_store img{
+width: 140px;
+padding-left: 20px;
+cursor: pointer;
+} */
