@@ -243,6 +243,7 @@ input {
   background-color: #040e0b;
   color: #f1ececec;
   height: 30%;
+  overflow-x: scroll;
 }
 .footer{
   display: flex;
