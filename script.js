@@ -78,7 +78,6 @@ const registerLoginPage = `<div class="modalOverlay">
 
 const addFunctionToLoginAndRegister = ()=>{
     Array.from(document.querySelectorAll('.register')).map((x)=>{
-        console.log("chal to ra h bro")
         x.addEventListener('click',()=>{openRegister();}) 
     })
     Array.from(document.querySelectorAll('.login')).map((x)=>{
@@ -95,6 +94,9 @@ Array.from(document.querySelectorAll('.addToCart')).map((x)=>{
         document.body.insertAdjacentHTML('afterbegin',registerLoginPage);
         addFunctionToLoginAndRegister();
         closeListner();
+        document.querySelector('.modal').addEventListener('click',(event)=>{
+            event.stopPropagation();
+        })
     })});
     
 Array.from(document.querySelectorAll('.addToWishlist')).map((x)=>{
@@ -103,6 +105,9 @@ Array.from(document.querySelectorAll('.addToWishlist')).map((x)=>{
         document.body.insertAdjacentHTML('afterbegin',registerLoginPage);
         addFunctionToLoginAndRegister();
         closeListner();
+        document.querySelector('.modal').addEventListener('click',(event)=>{
+            event.stopPropagation();
+        })
     })})
 
 
@@ -113,6 +118,9 @@ const openRegister = ()=>{
     closeModal();
     document.body.insertAdjacentHTML('afterbegin',registerPage);
     closeListner();
+    document.querySelector('.modal').addEventListener('click',(event)=>{
+        event.stopPropagation();
+    })
 }
 
 
@@ -122,6 +130,9 @@ const openLogin = ()=>{
     closeModal();
     document.body.insertAdjacentHTML('afterbegin',loginPage);
     closeListner();
+    document.querySelector('.modal').addEventListener('click',(event)=>{
+        event.stopPropagation();
+    })
 }
 
 
