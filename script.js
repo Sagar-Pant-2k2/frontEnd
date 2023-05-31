@@ -32,11 +32,11 @@ const registerLoginPage = `<div class="modalOverlay">
     </div>
     </div>
     <div class="lowerModal">
-    <div>
-    <input type="text" placeholder="UserEmail" class="inputFields">
+    <div class="inputFields">
+    <input type="email" placeholder="UserEmail" >
     </div>
-    <div>
-    <input type="password" placeholder="password" class="inputFields">
+    <div class="inputFields">
+    <input type="password" placeholder="password" >
     </div>
     <div style="display:flex;align-items:center">
     <input type="checkbox">&nbsp&nbsp Remember me 
@@ -45,6 +45,7 @@ const registerLoginPage = `<div class="modalOverlay">
     </div>
     </div>
     </div>`;
+  
     
     const registerPage = `<div class="modalOverlay">
 
@@ -59,14 +60,14 @@ const registerLoginPage = `<div class="modalOverlay">
 
 </div>
 <div class="lowerModal">
-<div>
-<input type="text" placeholder="UserName" class="inputFields">
+<div class="inputFields">
+<input type="text" placeholder="UserName" >
 </div>
-<div>
-<input type="email" placeholder="xyz@abc.jkl" class="inputFields">
+<div class="inputFields">
+<input type="email" placeholder="UserEmail (xyz@gmail.com)" >
 </div>
-<div>
-<input type="password" placeholder="password" class="inputFields">
+<div class="inputFields">
+<input type="password" placeholder="password" >
 </div>
 
 <button id="register">Register</button>
@@ -90,19 +91,14 @@ const addFunctionToLoginAndRegister = ()=>{
 Array.from(document.querySelectorAll('.addToCart')).map((x)=>{
     x.addEventListener('click',()=>{
         const modalOverlay = document.querySelector('.modalOverlay');
-        if (modalOverlay && document.body.contains(modalOverlay)) {
-            document.body.removeChild(modalOverlay);
-        }
+        closeModal();
         document.body.insertAdjacentHTML('afterbegin',registerLoginPage);
         addFunctionToLoginAndRegister();
-    })})
+    })});
     
-Array.from(document.querySelectorAll('.addToWishlist')).
-    map((x)=>{
+Array.from(document.querySelectorAll('.addToWishlist')).map((x)=>{
         x.addEventListener('click',()=>{
-            if (modalOverlay && document.body.contains(modalOverlay)) {
-                document.body.removeChild(modalOverlay);
-            }
+        closeModal();
         document.body.insertAdjacentHTML('afterbegin',registerLoginPage);
         addFunctionToLoginAndRegister();
     })})
@@ -112,9 +108,7 @@ Array.from(document.querySelectorAll('.addToWishlist')).
 // opening of registration window
 const openRegister = ()=>{
     const modalOverlay = document.querySelector('.modalOverlay');
-    if (modalOverlay && document.body.contains(modalOverlay)) {
-        document.body.removeChild(modalOverlay);
-    }
+    closeModal();
     document.body.insertAdjacentHTML('afterbegin',registerPage);
     modalOverlay = document.querySelector('.modalOverlay');
     modalOverlay.addEventListener('click',()=>{
@@ -129,9 +123,7 @@ const openRegister = ()=>{
 // opening of login window
 const openLogin = ()=>{
     const modalOverlay = document.querySelector('.modalOverlay');
-    if (modalOverlay && document.body.contains(modalOverlay)) {
-        document.body.removeChild(modalOverlay);
-      }
+    closeModal();
     document.body.insertAdjacentHTML('afterbegin',loginPage);
     modalOverlay = document.querySelector('.modalOverlay');
     modalOverlay.addEventListener('click',()=>{
@@ -147,9 +139,13 @@ const openLogin = ()=>{
 // function for closing modal windows
 const closeModal = ()=>{
     const modalOverlay = document.querySelector('.modalOverlay');
-    if (modalOverlay && document.body.contains(modalOverlay)) {
-        document.body.removeChild(modalOverlay);
-    }
+    if (modalOverlay && document.body.contains(modalOverlay)) {document.body.removeChild(modalOverlay);}
+}
+
+//closeListner
+const closeListner = ()=>{
+    const modalOverlay = document.querySelector('.modalOverlay')
+    modalOverlay.addEventListener('click',()=>{document.body.removeChild(modalOverlay)});
 }
 
 
