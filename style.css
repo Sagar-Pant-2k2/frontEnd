@@ -95,12 +95,16 @@ button{
     padding-top: 0px;
     width: 300px;
     overflow: hidden;
+    /* height: 570px; */
+    /* overflow-y: scroll; */
+
   }
   
   .productName {
     margin-left: 10px;
     font-size: 18px;
     margin-bottom: 10px;
+    height: 30px;
   }
   
   .productImage {
@@ -118,6 +122,8 @@ button{
   
   .productDescription p {
     margin:10px;
+    height: 50px;
+    overflow-y: scroll;
   }
   
   .productFeatures {
@@ -130,6 +136,7 @@ button{
     display: flex;
     align-items: center;
     padding: 10px;
+    
   }
   
   .productPrice {
