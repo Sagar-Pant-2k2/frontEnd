@@ -98,6 +98,7 @@ button{
     background-color: #000000;
     /* height: 570px; */
     /* overflow-y: scroll; */
+    border-radius: 10px;
 
   }
   
