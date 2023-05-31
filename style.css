@@ -262,7 +262,7 @@ input {
   min-width: 100vw;
   background-color: #040e0b;
   color: #f1ececec;
-  height: 30%;
+  height: 300px;
   overflow-x: scroll;
 }
 .footer{
@@ -271,16 +271,18 @@ input {
   justify-content: space-between;
   min-width: 100vw;
   margin: auto;
+
 }
 .footer_box h2{
   font-size: 17px;
   margin: 10px 0 15px 0;
   cursor: pointer;
 }
-/* .footer_box p{
-  margin: 8px 0 8px 0;
+.footer_box p{
+  margin: 10px;
   cursor: pointer;
 }
+/* 
 .Main_footer .imges{
   width: 400px;
 }
