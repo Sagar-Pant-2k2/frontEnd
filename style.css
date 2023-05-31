@@ -259,7 +259,7 @@ input {
 
 /* gargi's footer */
 .Main_footer{
-  width: 100%;
+  min-width: 100vw;
   background-color: #040e0b;
   color: #f1ececec;
   height: 30%;
@@ -269,7 +269,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
+  min-width: 100vw;
   margin: auto;
 }
 .footer_box h2{
